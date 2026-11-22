@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS campusconnect;
+
+USE campusconnect;
+
+CREATE TABLE IF NOT EXISTS feedback (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    usn VARCHAR(20) NOT NULL,
+    subject VARCHAR(100) NOT NULL,
+    rating INT NOT NULL,
+    comments TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

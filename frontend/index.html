@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CampusConnect</h1>
+        <p>Student Feedback Portal</p>
+    </header>
+
+    <main>
+        <section class="feedback-card">
+            <h2>Submit Feedback</h2>
+
+            <form id="feedbackForm">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="usn">USN</label>
+                <input type="text" id="usn" placeholder="Enter your USN" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Enter subject name" required>
+
+                <label for="rating">Rating</label>
+                <select id="rating" required>
+                    <option value="">Select rating</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Below Average</option>
+                    <option value="3">3 - Average</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+
+                <label for="comments">Comments</label>
+                <textarea id="comments" placeholder="Write your feedback..."></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <section class="feedback-list">
+            <h2>Submitted Feedback</h2>
+            <div id="feedbackContainer">
+                <p>Loading feedback...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
